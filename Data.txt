@@ -1,0 +1,17 @@
+npm start
+git log //깃 로그보기.
+git commit -a
+
+npm install @babel/core
+npm install @babel/node
+npm install @babel/preset-env"
+npm install body-parser
+npm install cookie-parser
+npm install core-js
+npm install helmet
+npm install morgan
+npm install nodemon
+npm install
+npm install
+
+npm install pug

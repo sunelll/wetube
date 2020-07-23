@@ -12,7 +12,8 @@
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0"
   },
   "scripts": {
     "start": "nodemon --exec babel-node init.js"
