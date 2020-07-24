@@ -1,6 +1,8 @@
 npm start
 git log //깃 로그보기.
 git commit -a
+git add . 
+rm -f ./.git/index.lock
 
 npm install @babel/core
 npm install @babel/node
@@ -15,3 +17,6 @@ npm install
 npm install
 
 npm install pug
+
+
+exrendsion - marjdown all in one - plugin

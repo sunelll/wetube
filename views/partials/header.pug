@@ -1,8 +1,10 @@
 header.header
     .header__column
-        i.fab.fa-youtube
         a(href=routes.home)
-            <i class="fab fa-youtube" aria-hidden="true"></i>
+            i.fab.fa-youtube
+    .header__column
+    form(action=routes.search, merhod="get")
+        input(type="text", placeholder="search by term..", name="term")
     .header__column
         ul
             li
