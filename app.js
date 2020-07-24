@@ -11,6 +11,7 @@ import routes from "./routes"
 const app = express();
 
 app.use(helmet());
+app.set("views", __dirname + "/views")
 app.set("view engine","pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -21,5 +22,10 @@ app.use(localsMiddleware)
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
+
+
+// app.get('/change-password2', function(req, res) {
+//     res.end('change-password2');
+// });
 
 export default app;
