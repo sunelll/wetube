@@ -13,10 +13,11 @@ npm install core-js
 npm install helmet
 npm install morgan
 npm install nodemon
-npm install
-npm install
-
 npm install pug
+npm i -S alert-node //node alert
 
+npm install mongodb --save
+npm install mongoose
+npm install dotenv
 
 exrendsion - marjdown all in one - plugin

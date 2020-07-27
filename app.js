@@ -24,8 +24,8 @@ app.use(routes.users, userRouter);
 app.use(routes.videos, videoRouter);
 
 
-// app.get('/change-password2', function(req, res) {
-//     res.end('change-password2');
-// });
+app.get('/change-password2', function(req, res) {
+    res.end('change-password2');
+});
 
 export default app;
