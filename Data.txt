@@ -19,5 +19,6 @@ npm i -S alert-node //node alert
 npm install mongodb --save
 npm install mongoose
 npm install dotenv
+npm install multer
 
 exrendsion - marjdown all in one - plugin
