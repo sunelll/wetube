@@ -22,3 +22,15 @@ npm install dotenv
 npm install multer
 
 exrendsion - marjdown all in one - plugin
+
+ npm install eslint -g //g는 글로벌하게 설치. 즉 전역적으로 사용가능하겠다는 말.
+ npx eslint --init
+√ How would you like to use ESLint? · style       
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · No / Yes
+√ Where does your code run? · browser
+√ How would you like to define a style for your project? · guide
+√ Which style guide do you want to follow? · airbnb      
+√ What format do you want your config file to be in? · JavaScript
+√ Would you like to install them now with npm? » Yes

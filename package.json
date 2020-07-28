@@ -24,6 +24,9 @@
     "start": "nodemon --exec babel-node init.js"
   },
   "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4"
   },
   "optionalDependencies": {}
