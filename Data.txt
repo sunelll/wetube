@@ -34,3 +34,6 @@ exrendsion - marjdown all in one - plugin
 √ Which style guide do you want to follow? · airbnb      
 √ What format do you want your config file to be in? · JavaScript
 √ Would you like to install them now with npm? » Yes
+
+npm install eslint-config-prettier
+npm install prettier -D

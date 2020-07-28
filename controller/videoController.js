@@ -4,7 +4,7 @@ import Video from "../models/Video";
 // Home
 export const home = async (req, res) => {
   try {
-    const videos = await Video.find({}).sort({'_id': -1});
+    const videos = await Video.find({}).sort({ _id: -1 });
     res.render("home", { pageTitle: "Home", videos });
   } catch (error) {
     //throw Error("에러!")
@@ -14,37 +14,44 @@ export const home = async (req, res) => {
 };
 
 // Search
-export const search = (req, res) => {
-    const {
-        query:{term: serchingBy}
-    } = req;
-    res.render("search", { pageTitle: "Search", serchingBy, videos});
+export const search = async (req, res) => {
+  const {
+    query: { term: searchingBy },
+  } = req;
+  let videos = [];
+  try {
+    videos = await Video.find({
+      title: { $regex: searchingBy, $options: "i" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
 
 //Upload
-export const getUpload = (req, res) => 
-  res.render("upload", { pageTitle: "Upload"});
-  
+export const getUpload = (req, res) =>
+  res.render("upload", { pageTitle: "Upload" });
+
 export const postUpload = async (req, res) => {
-  const{
+  const {
     body: { title, description },
-    file: { path }
+    file: { path },
   } = req;
-    
+
   // To Do : upload and save video
   const newVideo = await Video.create({
     fileUrl: path,
     title,
-    description
+    description,
   });
   res.redirect(routes.videoDetail(newVideo.id));
 };
 
-
 //Video Detail
 export const videoDetail = async (req, res) => {
   const {
-    params: { id }
+    params: { id },
   } = req;
   try {
     const video = await Video.findById(id);
@@ -57,7 +64,7 @@ export const videoDetail = async (req, res) => {
 //Edit Video
 export const getEditVideo = async (req, res) => {
   const {
-    params: { id }
+    params: { id },
   } = req;
   try {
     const video = await Video.findById(id);
@@ -70,7 +77,7 @@ export const getEditVideo = async (req, res) => {
 export const postEditVideo = async (req, res) => {
   const {
     params: { id },
-    body: { title, description }
+    body: { title, description },
   } = req;
   try {
     await Video.findOneAndUpdate({ _id: id }, { title, description });
@@ -84,12 +91,12 @@ export const postEditVideo = async (req, res) => {
 
 export const deleteVideo = async (req, res) => {
   const {
-    params: { id }
+    params: { id },
   } = req;
   try {
     await Video.findOneAndRemove({ _id: id });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
   res.redirect(routes.home);
 };
-
-
