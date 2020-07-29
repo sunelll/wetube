@@ -37,3 +37,10 @@ exrendsion - marjdown all in one - plugin
 
 npm install eslint-config-prettier
 npm install prettier -D
+
+npm install webpack webpack-cli
+npm install --save-dev extract-text-webpack-plugin@next
+npm install --save-dev cross-env
+
+npm install css-loader postcss-loader sass-loader
+npm install postcss-cli autoprefixer
