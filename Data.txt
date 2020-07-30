@@ -43,4 +43,12 @@ npm install --save-dev extract-text-webpack-plugin@next
 npm install --save-dev cross-env
 
 npm install css-loader postcss-loader sass-loader
+npm i --save--dev node-sass style-loader css-loader sass-loader
+
 npm install postcss-cli autoprefixer
+npm install babel-loader 
+npm install --save @babel/polyfill
+
+npm rebuild node-sass
+npm run dev:assets
+
