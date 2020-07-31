@@ -5,7 +5,7 @@
   width: 100%;
   button {
     width: 100%;
-    max-width: 320px;
+    max-width: 325px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,9 @@
       margin-right: 10px;
       font-size: 20px;
     }
+    span.i {
+      align-items: left;
+    }
   }
   .social-login--github {
     background-color: $black;
@@ -23,6 +26,10 @@
   }
   .social-login--facebook {
     background-color: #3a5998;
+    color: white;
+  }
+  .social-login--twitter {
+    background-color: #3498db;
     color: white;
   }
 }

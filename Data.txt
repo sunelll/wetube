@@ -49,6 +49,11 @@ npm install postcss-cli autoprefixer
 npm install babel-loader 
 npm install --save @babel/polyfill
 
+npm install passport-local-mongoose
+
+
+
+
+
 npm rebuild node-sass
 npm run dev:assets
-
