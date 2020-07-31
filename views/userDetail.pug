@@ -1,4 +1,5 @@
 extends layouts/main.pug
 
 block content
-    p userDetail
+    a.form-container__link(href=`/users${routes.editProfile}`)
+            button Edit_profile
