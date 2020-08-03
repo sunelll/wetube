@@ -48,12 +48,23 @@ npm i --save--dev node-sass style-loader css-loader sass-loader
 npm install postcss-cli autoprefixer
 npm install babel-loader 
 npm install --save @babel/polyfill
+npm install --save-dev mini-css-extract-plugin
 
 npm install passport-local-mongoose
+npm install passport
+npm install express-session
+npm install secret
+
+npm i connect-mongo
+npm install passport-github
 
 
-
-
-
++
 npm rebuild node-sass
 npm run dev:assets
+
+ _id: 5f27e2946d18822f28609cb7,
+  name: 'sunell',
+  email: '123@naver.com',
+
+
