@@ -37,9 +37,10 @@ app.use(
     secret: process.env.COOKIE_SECRET,
     resave: true,
     saveUninitialized: false,
-    stoore: new CokieStore({ mongooseConnection: mongoose.connection }),
+    store: new CokieStore({ mongooseConnection: mongoose.connection }),
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 
