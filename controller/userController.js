@@ -2,6 +2,7 @@ import passport from "passport";
 import routes from "../routes";
 //import alert from 'alert-node'
 import User from "../models/User";
+import { RSA_NO_PADDING } from "constants";
 
 export const getJoin = (req, res) => {
   res.render("join", { pageTitle: "Join" });
@@ -79,7 +80,26 @@ export const getMe = (req, res) => {
 export const userDetail = (req, res) =>
   res.render("UserDetail", { pageTitle: "User Detail" });
 
-export const editProfile = (req, res) =>
+export const getEditProfile = (req, res) =>
   res.render("EditProfile", { pageTitle: "Edit Profile" });
+
+export const postEditProfile = async (req, res) => {
+  const {
+    body: { name, email },
+    file,
+  } = req;
+
+  try {
+    await User.findByIdAndUpdate(req.user.id, {
+      name,
+      email,
+      avatarUrl: file ? file.path : req.user.avatarUrl,
+    });
+    res.redirect(routes.me);
+  } catch (error) {
+    res.render("editProfile", { pageTitle: "Edit Profile" });
+  }
+};
+
 export const changePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "changePassword" });
