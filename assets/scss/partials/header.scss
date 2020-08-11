@@ -36,6 +36,22 @@
           color: white;
         }
       }
+
+      ul :hover {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        max-width: none;
+        text-transform: uppercase;
+        font-size: 11pt;
+        li:not(:last-child) {
+          margin-right: 20px;
+        }
+        a {
+          color: white;
+        }
+      }
       form {
         width: 100%;
         input {
